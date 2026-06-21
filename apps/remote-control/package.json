@@ -1,0 +1,34 @@
+{
+	"name": "remote-control-mcp",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"check:types": "run-tsc",
+		"check:lint": "run-eslint-workers",
+		"deploy": "run-wrangler-deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest run",
+		"types": "wrangler types --include-env=false"
+	},
+	"dependencies": {
+		"@cloudflare/workers-oauth-provider": "0.4.0",
+		"@hono/zod-validator": "0.4.3",
+		"@modelcontextprotocol/sdk": "1.20.2",
+		"@repo/mcp-common": "workspace:*",
+		"@repo/mcp-observability": "workspace:*",
+		"agents": "0.2.19",
+		"cloudflare": "4.2.0",
+		"hono": "4.7.6",
+		"zod": "3.24.2"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "0.8.14",
+		"@types/node": "22.14.1",
+		"prettier": "3.5.3",
+		"typescript": "5.5.4",
+		"vitest": "3.0.9",
+		"wrangler": "4.10.0"
+	}
+}
